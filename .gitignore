@@ -1,0 +1,29 @@
+# ========================================
+# Ignore environment files and secrets
+.env
+*.env
+
+# ========================================
+# Python virtual environment
+venv/
+.env/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Node modules (if frontend uses npm/yarn)
+node_modules/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# IDE / editor folders
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
