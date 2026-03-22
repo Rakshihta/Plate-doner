@@ -12,9 +12,9 @@ donations_collection = db["donations"]
 users_collection = db["users"]
 
 try:
-    print("✅ Connected to:", client.list_database_names())
+    print("Connected to:", client.list_database_names())
 except Exception as e:
-    print("❌ MongoDB Connection Error:", e)
+    print("MongoDB Connection Error:", e)
 
 
 
