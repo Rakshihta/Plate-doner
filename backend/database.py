@@ -16,6 +16,6 @@ try:
 except Exception as e:
     print("MongoDB Connection Error:", e)
 
-
+users_collection = db["users"]
 
 

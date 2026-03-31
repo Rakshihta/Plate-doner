@@ -6,3 +6,12 @@ class Donation(BaseModel):
     quantity: int
     location: str
     prepared_at: str  # or datetime if you handle conversion
+
+
+class UserCreate(BaseModel):
+    username: str
+    password: str
+
+class UserLogin(BaseModel):
+    username: str
+    password: str
