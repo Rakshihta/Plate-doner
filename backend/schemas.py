@@ -1,17 +1,17 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, EmailStr
 
 class Donation(BaseModel):
     donor_name: str
+    email: EmailStr   
     food_type: str
     quantity: int
     location: str
-    prepared_at: str  # or datetime if you handle conversion
-
-
+    prepared_at: str
+    
 class UserCreate(BaseModel):
-    username: str
+    email: EmailStr
     password: str
 
 class UserLogin(BaseModel):
-    username: str
+    email: EmailStr
     password: str

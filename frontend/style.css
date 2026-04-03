@@ -727,3 +727,148 @@ nav ul li a{
     max-width: 100%;
   }
 }
+
+
+/* ====================================================== */
+/* LOGIN PAGE */
+/* ====================================================== */
+
+.login-body {
+    background-color: #101010;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    background: #191919;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    text-align: center;
+}
+
+.login-container h2 {
+    color: white;
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.login-container h2 span {
+    color: #fc0050;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: none;
+    outline: none;
+    background: #101010;
+    color: white;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.login-form input:focus {
+    border: 1px solid #fc0050;
+}
+
+/* Login button */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background: #fc0050;
+    border: none;
+    color: white;
+    font-size: 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login-btn:hover {
+    background: transparent;
+    border: 2px solid #fc0050;
+    transform: scale(1.05);
+}
+
+/* Google button */
+.google-btn {
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    background: white;
+    color: black;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+    transition: 0.3s;
+}
+
+.google-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Small text */
+.login-container p {
+    color: #aaa;
+    margin-top: 15px;
+}
+
+/* ================= GLOBAL ALERT ================= */
+.custom-alert {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.alert-box {
+    background: #191919;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 0 25px rgba(252, 0, 80, 0.4);
+    animation: scaleUp 0.3s ease;
+}
+
+.alert-box i {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.alert-box h3 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.alert-box p {
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+.alert-box button {
+    padding: 10px 20px;
+    background: #fc0050;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+@keyframes scaleUp {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}

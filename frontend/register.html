@@ -5,18 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donate Food | PlateDonor</title>
+
     <link rel="icon" href="./photos/logo.png">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Paytone+One&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 </head>
 
 <body class="register-body">
+
     <!-- Navigation -->
     <nav>
-        <img src="./photos/logo.png" class="logo" alt="Logo" title="PlateDonor">
+        <img src="./photos/logo.png" class="logo">
         <ul class="navbar">
             <li>
                 <a href="./index.html">Home</a>
@@ -24,6 +25,7 @@
                 <a href="./register.html" class="active">Donate Food</a>
                 <a href="./contact.html">Receive Food</a>
                 <a href="./about.html">About Us</a>
+                <a href="./login.html">Login</a>
             </li>
         </ul>
     </nav>
@@ -35,27 +37,42 @@
             <p>It's not how much we give, but how much love we put into giving!</p><br>
 
             <form id="donationForm">
+
+                <!-- Name -->
                 <input type="text" id="donor_name" placeholder="Your Name" required>
-                <input type="email" id="email" placeholder="Your Email" required>
+
+                <!-- Email (AUTO FILLED) -->
+                <input type="email" id="email" placeholder="Your Email" readonly>
+
+                <!-- Phone -->
                 <input type="tel" id="phonenum" placeholder="Your Phone No." required>
+
+                <!-- Address -->
                 <input type="text" id="address" placeholder="Collection Address" required>
 
+                <!-- Category -->
                 <h4>Category</h4>
                 <label><input type="radio" name="food_type" value="Veg" required> Veg</label>
                 <label><input type="radio" name="food_type" value="Non-Veg" required> Non-Veg</label>
                 <label><input type="radio" name="food_type" value="Both" required> Both</label>
 
+                <!-- Quantity -->
                 <h4>Quantity (in Kg)</h4>
                 <input type="number" id="quantity" min="1" placeholder="Enter quantity" required>
 
+                <!-- Date -->
                 <h4>Food Preparation Date and Time</h4>
                 <input type="datetime-local" id="food_date" required><br><br>
 
-                <textarea id="note" cols="2" rows="3" placeholder="Special Note (optional)"></textarea><br><br>
-                
-                <input type="checkbox" id="terms" checked required> I accept the Terms & Conditions.<br><br>
+                <!-- Note -->
+                <textarea id="note" rows="3" placeholder="Special Note (optional)"></textarea><br><br>
 
+                <!-- Terms -->
+                <input type="checkbox" id="terms" required> I accept the Terms & Conditions.<br><br>
+
+                <!-- Submit -->
                 <input type="submit" value="Submit" class="submitbtn">
+
             </form>
         </div>
     </section>
@@ -90,6 +107,15 @@
         </div>
     </section>
 
-    <script src="script.js" defer></script>
+    <div id="customAlert" class="custom-alert">
+        <div class="alert-box">
+            <i id="alertIcon" class='bx'></i>
+            <h3 id="alertTitle"></h3>
+            <p id="alertMessage"></p>
+            <button onclick="closeAlert()">OK</button>
+        </div>
+    </div>
+
 </body>
+<script src="script.js" defer></script>
 </html>

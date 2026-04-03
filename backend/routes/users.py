@@ -4,9 +4,11 @@ from utils.jwt import create_access_token
 
 router = APIRouter(prefix="/users", tags=["Users"])
 
+
 @router.post("/signup")
 def signup(user: schemas.UserCreate):
     return crud.create_user(user)
+
 
 @router.post("/login")
 def login(user: schemas.UserLogin):
@@ -15,5 +17,5 @@ def login(user: schemas.UserLogin):
     if not db_user:
         raise HTTPException(status_code=401, detail="Invalid credentials")
 
-    token = create_access_token({"sub": db_user["username"]})
+    token = create_access_token({"sub": db_user["email"]})
     return {"access_token": token}
