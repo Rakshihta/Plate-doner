@@ -7,3 +7,4 @@ python-jose
 authlib
 requests
 email-validator
+httpx
