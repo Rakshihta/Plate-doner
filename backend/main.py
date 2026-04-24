@@ -10,7 +10,9 @@ app = FastAPI()
 # CORS - cross origin resource sharing - added coz my frontend and backend running two different ports
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Allows all origins for development
+    allow_origins=[
+        "https://incomparable-churros-ffa3a4.netlify.app"
+    ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
