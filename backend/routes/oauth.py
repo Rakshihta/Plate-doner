@@ -19,7 +19,7 @@ oauth.register(
 # ---------- STEP 1: Redirect to Google ----------
 @router.get("/login")
 async def login(request: Request):
-    redirect_uri = "https://your-backend.onrender.com/auth/callback"
+    redirect_uri = "https://plate-doner.onrender.com/auth/callback"
     return await oauth.google.authorize_redirect(request, redirect_uri)
 
 
