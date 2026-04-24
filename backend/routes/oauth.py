@@ -33,7 +33,7 @@ async def auth_callback(request: Request):
 
     # ✅ Redirect to frontend with token
     return RedirectResponse(
-    url=f"http://127.0.0.1:5500/frontend/login.html?token={jwt_token}",
+    url=f"https://incomparable-churros-ffa3a4.netlify.app/login.html?token={jwt_token}",
     status_code=302
     )
 
